@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EncapsDemonstrator : OOPDemonstrator
 {
-    // Start is called before the first frame update
-    void Start()
+
+
+    protected override void DemonstratePillarBehaviour()
     {
-        ClassName = "Encapsulation";
+
+    }
+    protected override string PopulateExplanationText()
+    {
+        string ExplanationText = "This is the encapsulation demonstrator class. Variables and methods across the demonstrator classes have had their access modifiers altered based on the needs of the application. This promotes security and efficiency.";
+        return ExplanationText;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

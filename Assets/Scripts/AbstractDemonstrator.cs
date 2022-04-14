@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class AbstractDemonstrator : OOPDemonstrator
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        ClassName = "Abstraction";
-    }
+ 
 
-    // Update is called once per frame
-    void Update()
+    protected override void DemonstratePillarBehaviour()
     {
         
     }
+
+    protected override string PopulateExplanationText()
+    {
+        string ExplanationText = "This is the abstraction demonstrator class. Each sphere is controlled using the overriden method 'DemonstratePillarBehaviour'. This is a high-abstraction method which allows for easy comprehension of its intended purpose.";
+        return ExplanationText;
+    }
+
+
 }

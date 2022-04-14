@@ -1,23 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
+
 
 public class MenuUIHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void StartGame()
     {
-        SceneManager.LoadScene(1);   
+        SceneManager.LoadScene(1);
     }
-    // Update is called once per frame
-    void Update()
+    public void ExitGame()
     {
-        
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
     }
 }
